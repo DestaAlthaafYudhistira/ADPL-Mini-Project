@@ -11,7 +11,7 @@ stok = [[100,    30,   80,    50,     40],     # Gudang A
 
 # ARRAY 2D: donasi = [[nama, jumlah, sisa_hari_kedaluwarsa], ...]
 
-donasi = [
+donasi = [ 
     ["Minyak", 40, 30],
     ["Beras", 100,  5],
     ["Mie",    60, 90],
