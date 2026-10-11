@@ -1,7 +1,5 @@
-# ARRAY 1D: nama barang 
+# ARRAY 1D: nama barang dan nama gudang
 barang = ["Beras", "Gula", "Mie", "Minyak", "Telur"]
-
-# ARRAY 1D: nama gudang
 gudang = ["Gudang A", "Gudang B"]
 
 # ARRAY 2D: stok[i][j] = stok barang ke-j di gudang ke-i
@@ -25,7 +23,7 @@ def baca_angka(pesan):
             nilai = int(input(pesan))
             if nilai > 0:
                 return nilai
-            print("  Angka tidak boleh bernilai 0 atau negatif!")
+            print("  Angka tidak boleh bernilai negatif atau kosong!")
         except ValueError:
             print("  Input harus berupa bilangan bulat!")
 
@@ -65,8 +63,7 @@ def binary_search(arr, target, kiri, kanan, langkah=0):
 def bubble_sort(data):
     """BUBBLE SORT: bandingkan 2 data bertetangga, tukar jika salah urut.
        Diurutkan FEFO: sisa hari paling sedikit didahulukan.
-       Best O(n) (data sudah urut), Worst O(n^2).
-       Mengembalikan (data_terurut, jumlah_perbandingan)."""
+       Best O(n) (data sudah urut), Worst O(n^2)."""
     hasil = []
     for baris in data:
         hasil.append(baris[:])              # salin agar data asli aman
@@ -177,12 +174,12 @@ def menu():
         print("\n" + "=" * 45)
         print("   PANGANKITA - Gudang Bantuan Sembako")
         print("=" * 45)
-        print("1. Lihat stok gudang      (array 2D)")
-        print("2. Tambah donasi          (array + binary search)")
-        print("3. Cari barang            (binary search)")
-        print("4. Urutkan donasi         (bubble sort / FEFO)")
-        print("5. Rekap total stok       (rekursi)")
-        print("0. Keluar")
+        print("1. Lihat stok gudang ")
+        print("2. Tambah donasi ")
+        print("3. Cari barang ")
+        print("4. Urutkan donasi ")
+        print("5. Rekap total stok ")
+        print("6. Keluar")
         pilih = baca_angka("Pilih menu: ")
 
         if pilih == 1:
@@ -195,7 +192,7 @@ def menu():
             urutkan_donasi()
         elif pilih == 5:
             rekap_stok()
-        elif pilih == 0:
+        elif pilih == 6:
             print("Terima kasih!")
             break
         else:
